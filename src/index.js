@@ -3,4 +3,20 @@
 
 module.exports = function towelSort (matrix) {
   return [];
+  if(arguments.length === 0) {
+    return [];
+  }
+
+  const sortedTowel = [];
+
+  matrix.forEach((arr, index) => {
+    if(index % 2 === 0) {
+      sortedTowel.push(...arr);
+    } else {
+      sortedTowel.push(...arr.reverse());
+    }
+
+  });
+
+  return sortedTowel;
 }
